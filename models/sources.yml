@@ -1,0 +1,11 @@
+sources:
+  - name: input_layer
+    schema: core
+    tables: 
+      - name: condition
+      - name: encounter
+      - name: location
+      - name: medication
+      - name: patient
+      - name: practitioner
+      - name: procedure

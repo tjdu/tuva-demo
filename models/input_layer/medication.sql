@@ -1,26 +1,25 @@
 select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
-      cast(null as {{ dbt.type_string() }} ) as person_id
+      cast(null as {{ dbt.type_string() }} ) as medication_id
+    , cast(null as {{ dbt.type_string() }} ) as person_id
     , cast(null as {{ dbt.type_string() }} ) as patient_id
-    , cast(null as {{ dbt.type_string() }} ) as name_suffix
-    , cast(null as {{ dbt.type_string() }} ) as first_name
-    , cast(null as {{ dbt.type_string() }} ) as middle_name
-    , cast(null as {{ dbt.type_string() }} ) as last_name
-    , cast(null as {{ dbt.type_string() }} ) as sex
-    , cast(null as {{ dbt.type_string() }} ) as race
-    , cast(null as date) as birth_date
-    , cast(null as date) as death_date
-    , cast(null as {{ dbt.type_int() }} ) as death_flag
-    , cast(null as {{ dbt.type_string() }} ) as social_security_number
-    , cast(null as {{ dbt.type_string() }} ) as address
-    , cast(null as {{ dbt.type_string() }} ) as city
-    , cast(null as {{ dbt.type_string() }} ) as state
-    , cast(null as {{ dbt.type_string() }} ) as zip_code
-    , cast(null as {{ dbt.type_string() }} ) as county
-    , cast(null as {{ dbt.type_float() }} ) as latitude
-    , cast(null as {{ dbt.type_float() }} ) as longitude
-    , cast(null as {{ dbt.type_string() }} ) as phone
-    , cast(null as {{ dbt.type_string() }} ) as email
-    , cast(null as {{ dbt.type_string() }} ) as ethnicity
+    , cast(null as {{ dbt.type_string() }} ) as encounter_id
+    , cast(null as date) as dispensing_date
+    , cast(null as date) as prescribing_date
+    , cast(null as {{ dbt.type_string() }} ) as source_code_type
+    , cast(null as {{ dbt.type_string() }} ) as source_code
+    , cast(null as {{ dbt.type_string() }} ) as source_description
+    , cast(null as {{ dbt.type_string() }} ) as ndc_code
+    , cast(null as {{ dbt.type_string() }} ) as ndc_description
+    , cast(null as {{ dbt.type_string() }} ) as rxnorm_code
+    , cast(null as {{ dbt.type_string() }} ) as rxnorm_description
+    , cast(null as {{ dbt.type_string() }} ) as atc_code
+    , cast(null as {{ dbt.type_string() }} ) as atc_description
+    , cast(null as {{ dbt.type_string() }} ) as route
+    , cast(null as {{ dbt.type_string() }} ) as strength
+    , cast(null as {{ dbt.type_int() }} ) as quantity
+    , cast(null as {{ dbt.type_string() }} ) as quantity_unit
+    , cast(null as {{ dbt.type_int() }} ) as days_supply
+    , cast(null as {{ dbt.type_string() }} ) as practitioner_id
     , cast(null as {{ dbt.type_string() }} ) as data_source
     , cast(null as {{ dbt.type_string() }} ) as file_name
     , cast(null as {{ dbt.type_timestamp() }} ) as ingest_datetime

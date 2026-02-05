@@ -1,7 +1,7 @@
 version: 2
 
 models:
-
+# Empty placeholder tables
   - name: condition
     config:
       schema: input_layer

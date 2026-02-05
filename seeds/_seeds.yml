@@ -670,3 +670,13 @@ seeds:
           {%- if target.type in ("bigquery", "databricks") -%} string {%- else -%} varchar(255) {%- endif -%}
         custom_attributed_provider_lob: |
           {%- if target.type in ("bigquery", "databricks") -%} string {%- else -%} varchar(255) {%- endif -%}
+
+  - name: cancer_group
+    config:
+        schema: input_layer
+        tags: cancer_icd_10
+        column_types:
+          cancer_group: varchar(255)
+          code_starting_from: varchar(255)
+          code_ending_at: varchar(255)
+          cancer_group_description: varchar(255)

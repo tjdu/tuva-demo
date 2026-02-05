@@ -1,0 +1,11 @@
+version: 2
+
+# ICD 10 codes derived from: https://www.icd10data.com/ICD10CM/Codes/C00-D49 
+
+models:
+
+  - name: int_cancer_conditions
+    config:
+      schema: intermediate_layer
+      tags: cancer_icd_10
+      +materialized: view

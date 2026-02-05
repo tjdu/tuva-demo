@@ -1,0 +1,38 @@
+version: 2
+
+models:
+
+  - name: stg_condition
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_encounter
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_location
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_medication
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_patient
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_practitioner
+    config:
+      schema: staging_layer
+      +materialized: view
+
+  - name: stg_procedure
+    config:
+      schema: staging_layer
+      +materialized: view

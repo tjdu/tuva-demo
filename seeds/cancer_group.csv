@@ -1,0 +1,22 @@
+cancer_group,code_starting_from,code_ending_at,cancer_group_description
+malignant,C00,C14,Malignant neoplasms of lip oral cavity and pharynx
+malignant,C15,C26,Malignant neoplasms of digestive organs
+malignant,C30,C39,Malignant neoplasms of respiratory and intrathoracic organs
+malignant,C40,C41,Malignant neoplasms of bone and articular cartilage
+malignant,C43,C44,Melanoma and other malignant neoplasms of skin
+malignant,C45,C49,Malignant neoplasms of mesothelial and soft tissue
+malignant,C50,C50,Malignant neoplasms of breast
+malignant,C51,C58,Malignant neoplasms of female genital organs
+malignant,C60,C63,Malignant neoplasms of male genital organs
+malignant,C64,C68,Malignant neoplasms of urinary tract
+malignant,C69,C72,Malignant neoplasms of eye brain and other parts of central nervous system
+malignant,C73,C75,Malignant neoplasms of thyroid and other endocrine glands
+malignant,C76,C80,Malignant neoplasms of ill-defined other secondary and unspecified sites
+malignant,C7A,C7A,Malignant neuroendocrine tumors
+malignant,C7B,C7B,Secondary neuroendocrine tumors
+malignant,C81,C96,Malignant neoplasms of lymphoid hematopoietic and related tissue
+in_situ,D00,D09,In situ neoplasms
+benign,D10,D36,Benign neoplasms except benign neuroendocrine tumors
+benign,D3A,D3A,Benign neuroendocrine tumors
+uncertain,D37,D48,Neoplasms of uncertain behavior polycythemia vera and myelodysplastic syndromes
+unspecified,D49,D49,Neoplasms of unspecified behavior

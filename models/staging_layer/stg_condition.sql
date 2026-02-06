@@ -1,4 +1,4 @@
-select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
+select
       cast( condition_id                  as {{ dbt.type_string() }} ) as condition_id
     , cast( person_id                     as {{ dbt.type_string() }} ) as person_id
     , cast( patient_id                    as {{ dbt.type_string() }} ) as patient_id
@@ -22,4 +22,4 @@ select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
     , cast( null                          as {{ dbt.type_string() }} ) as file_name
     , cast( {{ dbt.current_timestamp() }} as {{ dbt.type_timestamp() }} ) as ingest_datetime
     , cast( tuva_last_run as {{ dbt.type_timestamp() }} ) as tuva_last_run
-from {{ source('input_layer','condition') }}
+from {{ source('core','condition') }}

@@ -1,4 +1,4 @@
-select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
+select 
       cast(location_id         as {{ dbt.type_string() }} ) as location_id
     , cast(npi                 as {{ dbt.type_string() }} ) as npi
     , cast(name                as {{ dbt.type_string() }} ) as name
@@ -12,4 +12,4 @@ select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
     , cast(longitude           as {{ dbt.type_float() }} ) as longitude
     , cast(data_source         as {{ dbt.type_string() }} ) as data_source
     , cast(tuva_last_run       as {{ dbt.type_timestamp() }} ) as tuva_last_run
-from {{ source('input_layer','location') }}
+from {{ source('core','location') }}

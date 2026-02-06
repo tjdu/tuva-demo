@@ -1,5 +1,5 @@
 sources:
-  - name: input_layer
+  - name: core
     schema: core
     tables: 
       - name: condition
@@ -9,3 +9,4 @@ sources:
       - name: patient
       - name: practitioner
       - name: procedure
+      - name: medical_claim

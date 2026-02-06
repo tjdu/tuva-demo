@@ -12,10 +12,14 @@ from (
     select
         distinct
         normalized_code,
+        normalized_code_type,
         normalized_description
     from {{ ref('stg_condition') }} 
 ) staging 
 left outer join {{ ref('cancer_group') }} reference 
-on staging.normalized_code 
-between reference.code_starting_from and reference.code_ending_at
-or regexp_matches(staging.normalized_code,'^' || code_ending_at || '.*') -- inclusive
+on staging.normalized_code_type = 'icd-10-cm'
+and (
+    staging.normalized_code between reference.code_starting_from and reference.code_ending_at
+    or regexp_matches(staging.normalized_code,'^' || code_ending_at || '.*') -- inclusive
+) 
+where reference.cancer_group IS NOT NULL

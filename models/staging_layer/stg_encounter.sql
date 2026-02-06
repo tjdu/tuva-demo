@@ -1,4 +1,4 @@
-select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
+select
       cast(encounter_id                      as {{ dbt.type_string() }} ) as encounter_id
     , cast(person_id                         as {{ dbt.type_string() }} ) as person_id
     , cast(null                              as {{ dbt.type_string() }} ) as patient_id
@@ -24,9 +24,9 @@ select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
     , cast(drg_description                   as {{ dbt.type_string() }} ) as drg_description
     , cast(paid_amount                       as {{ dbt.type_float() }} ) as paid_amount
     , cast(allowed_amount                    as {{ dbt.type_float() }} ) as allowed_amount
-    , cast(charge_amount                     as {{ dbt.type_float() }} ) as charge_amount
+    , cast(null                              as {{ dbt.type_float() }} ) as charge_amount     -- do NOT use this field as inst. charges are overcounted
     , cast(data_source                       as {{ dbt.type_string() }} ) as data_source
     , cast(null                              as {{ dbt.type_string() }} ) as file_name
     , cast({{ dbt.current_timestamp() }}     as {{ dbt.type_timestamp() }} ) as ingest_datetime
     , cast(tuva_last_run                     as {{ dbt.type_timestamp() }} ) as tuva_last_run
-from {{ source('input_layer','encounter') }}
+from {{ source('core','encounter') }}

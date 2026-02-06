@@ -1,4 +1,4 @@
-select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
+select
       cast(practitioner_id       as {{ dbt.type_string() }} ) as practitioner_id
     , cast(npi                   as {{ dbt.type_string() }} ) as npi
     , cast(provider_first_name   as {{ dbt.type_string() }} ) as first_name
@@ -8,4 +8,4 @@ select {% if target.type == 'fabric' %} top 0 {% else %}{% endif %}
     , cast(sub_specialty         as {{ dbt.type_string() }} ) as sub_specialty
     , cast(data_source           as {{ dbt.type_string() }} ) as data_source
     , cast(tuva_last_run         as {{ dbt.type_timestamp() }} ) as tuva_last_run
-from {{ source('input_layer','practitioner') }}
+from {{ source('core','practitioner') }}

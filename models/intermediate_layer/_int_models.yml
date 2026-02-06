@@ -8,4 +8,4 @@ models:
     config:
       schema: intermediate_layer
       tags: cancer_icd_10
-      +materialized: view
+      +materialized: table

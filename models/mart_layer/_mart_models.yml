@@ -1,0 +1,21 @@
+version: 2
+
+models:
+
+  - name: fct_claim
+    config:
+      schema: mart_layer
+      tags: cancer_icd_10
+      +materialized: table
+
+  - name: dim_cancer_condition
+    config:
+      schema: mart_layer
+      tags: cancer_icd_10
+      +materialized: table
+
+  - name: dim_cancer_encounter
+    config:
+      schema: mart_layer
+      tags: cancer_icd_10
+      +materialized: table

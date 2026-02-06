@@ -1,0 +1,9 @@
+version: 2
+
+models:
+
+  - name: agg_cancer_cohort
+    config:
+      schema: reporting_layer
+      tags: cancer_icd_10
+      +materialized: table

@@ -22,6 +22,11 @@ models:
       schema: staging_layer
       +materialized: view
 
+  - name: stg_medical_claim
+    config:
+      schema: staging_layer
+      +materialized: view
+
   - name: stg_patient
     config:
       schema: staging_layer

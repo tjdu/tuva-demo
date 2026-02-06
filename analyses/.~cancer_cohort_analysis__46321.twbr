@@ -1,0 +1,1007 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0109.0333                               -->
+<workbook original-version='18.1' source-build='2025.3.2 (20253.26.0109.0333)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='color_analysis' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='agg_cancer_cohort' inline='true' name='Clipboard_20260205T235814' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20260205T235814' name='Clipboard_20260205T235814leaf'>
+            <connection class='textscan' directory='/Users/tjdu/Documents/My Tableau Repository/Datasources' filename='Clipboard_20260205T235814.txt' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='Clipboard_20260205T235814leaf' name='Clipboard_20260205T235814#txt' table='[Clipboard_20260205T235814#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator='&#9;'>
+            <column datatype='string' name='encounter_group' ordinal='0' />
+            <column datatype='string' name='care_setting' ordinal='1' />
+            <column datatype='string' name='primary_diagnosis_code_type' ordinal='2' />
+            <column datatype='string' name='primary_diagnosis_code' ordinal='3' />
+            <column datatype='string' name='primary_diagnosis_description' ordinal='4' />
+            <column datatype='string' name='cancer_type' ordinal='5' />
+            <column datatype='string' name='cancer_type_description' ordinal='6' />
+            <column datatype='integer' name='num_encounters' ordinal='7' />
+            <column datatype='integer' name='num_claims' ordinal='8' />
+            <column datatype='real' name='total_paid_amount' ordinal='9' />
+            <column datatype='real' name='total_allowed_amount' ordinal='10' />
+            <column datatype='real' name='total_charge_amount' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>encounter_group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[encounter_group]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>encounter_group</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>care_setting</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[care_setting]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>care_setting</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis_code_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis_code_type]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>primary_diagnosis_code_type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis_code]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>primary_diagnosis_code</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis_description]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>primary_diagnosis_description</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancer_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cancer_type]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>cancer_type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancer_type_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cancer_type_description]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>cancer_type_description</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_encounters</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_encounters]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>num_encounters</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_claims</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_claims]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>num_claims</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_paid_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_paid_amount]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>total_paid_amount</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_allowed_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_allowed_amount]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>total_allowed_amount</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_charge_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_charge_amount]</local-name>
+            <parent-name>[Clipboard_20260205T235814#txt]</parent-name>
+            <remote-alias>total_charge_amount</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Clipboard_20260205T235814]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Patient Paid Per Encounter' datatype='real' name='[Calculation_3183190753738753]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([total_charge_amount]) - SUM([total_paid_amount]))&#10;&#10;/ SUM([num_encounters])' />
+      </column>
+      <column caption='Clipboard_20260205T235814' datatype='table' name='[__tableau_internal_object_id__].[Clipboard_20260205T235814]' role='measure' type='quantitative' />
+      <column caption='Cancer Type' datatype='string' name='[cancer_type]' role='dimension' type='nominal' />
+      <column caption='Cancer Type Description' datatype='string' name='[cancer_type_description]' role='dimension' type='nominal' />
+      <column caption='Care Setting' datatype='string' name='[care_setting]' role='dimension' type='nominal' />
+      <column caption='Encounter Group' datatype='string' name='[encounter_group]' role='dimension' type='nominal' />
+      <column caption='Num Claims' datatype='integer' name='[num_claims]' role='measure' type='quantitative' />
+      <column caption='Num Encounters' datatype='integer' name='[num_encounters]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis Code' datatype='string' name='[primary_diagnosis_code]' role='dimension' type='nominal' />
+      <column caption='Primary Diagnosis Code Type' datatype='string' name='[primary_diagnosis_code_type]' role='dimension' type='nominal' />
+      <column caption='Primary Diagnosis Description' datatype='string' name='[primary_diagnosis_description]' role='dimension' type='nominal' />
+      <column caption='Total Allowed Amount' datatype='real' name='[total_allowed_amount]' role='measure' type='quantitative' />
+      <column caption='Total Charge Amount' datatype='real' name='[total_charge_amount]' role='measure' type='quantitative' />
+      <column caption='Total Paid Amount' datatype='real' name='[total_paid_amount]' role='measure' type='quantitative' />
+      <column-instance column='[cancer_type]' derivation='None' name='[none:cancer_type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_1tndrqu1e87dcd12y9lw116ny818.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>encounter_group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[encounter_group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>encounter_group</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>care_setting</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[care_setting]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>care_setting</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_diagnosis_code_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primary_diagnosis_code_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_diagnosis_code_type</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_diagnosis_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primary_diagnosis_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_diagnosis_code</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_diagnosis_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primary_diagnosis_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_diagnosis_description</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancer_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cancer_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancer_type</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancer_type_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cancer_type_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancer_type_description</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_encounters</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_encounters]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_encounters</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_claims</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_claims]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_claims</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_paid_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_paid_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_paid_amount</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_allowed_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_allowed_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_allowed_amount</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_charge_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_charge_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_charge_amount</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Clipboard_20260205T235814#txt</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>99</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:cancer_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;malignant&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;unspecified&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;in_situ&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;uncertain&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;benign&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Clipboard_20260205T235814' id='Clipboard_20260205T235814'>
+            <properties context=''>
+              <relation connection='Clipboard_20260205T235814leaf' name='Clipboard_20260205T235814#txt' table='[Clipboard_20260205T235814#txt]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator='&#9;'>
+                  <column datatype='string' name='encounter_group' ordinal='0' />
+                  <column datatype='string' name='care_setting' ordinal='1' />
+                  <column datatype='string' name='primary_diagnosis_code_type' ordinal='2' />
+                  <column datatype='string' name='primary_diagnosis_code' ordinal='3' />
+                  <column datatype='string' name='primary_diagnosis_description' ordinal='4' />
+                  <column datatype='string' name='cancer_type' ordinal='5' />
+                  <column datatype='string' name='cancer_type_description' ordinal='6' />
+                  <column datatype='integer' name='num_encounters' ordinal='7' />
+                  <column datatype='integer' name='num_claims' ordinal='8' />
+                  <column datatype='real' name='total_paid_amount' ordinal='9' />
+                  <column datatype='real' name='total_allowed_amount' ordinal='10' />
+                  <column datatype='real' name='total_charge_amount' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_cancer_cohort' name='Clipboard_20260205T235814' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20260205T235814'>
+            <column caption='Cancer Type' datatype='string' name='[cancer_type]' role='dimension' type='nominal' />
+            <column caption='Cancer Type Description' datatype='string' name='[cancer_type_description]' role='dimension' type='nominal' />
+            <column caption='Care Setting' datatype='string' name='[care_setting]' role='dimension' type='nominal' />
+            <column caption='Encounter Group' datatype='string' name='[encounter_group]' role='dimension' type='nominal' />
+            <column-instance column='[cancer_type]' derivation='None' name='[none:cancer_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cancer_type_description]' derivation='None' name='[none:cancer_type_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[care_setting]' derivation='None' name='[none:care_setting:nk]' pivot='key' type='nominal' />
+            <column-instance column='[encounter_group]' derivation='None' name='[none:encounter_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[primary_diagnosis_code]' derivation='None' name='[none:primary_diagnosis_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[primary_diagnosis_description]' derivation='None' name='[none:primary_diagnosis_description:nk]' pivot='key' type='nominal' />
+            <column caption='Num Claims' datatype='integer' name='[num_claims]' role='measure' type='quantitative' />
+            <column caption='Num Encounters' datatype='integer' name='[num_encounters]' role='measure' type='quantitative' />
+            <column caption='Primary Diagnosis Code' datatype='string' name='[primary_diagnosis_code]' role='dimension' type='nominal' />
+            <column caption='Primary Diagnosis Description' datatype='string' name='[primary_diagnosis_description]' role='dimension' type='nominal' />
+            <column-instance column='[num_claims]' derivation='Sum' name='[sum:num_claims:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[num_encounters]' derivation='Sum' name='[sum:num_encounters:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_allowed_amount]' derivation='Sum' name='[sum:total_allowed_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_charge_amount]' derivation='Sum' name='[sum:total_charge_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_paid_amount]' derivation='Sum' name='[sum:total_paid_amount:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Allowed Amount' datatype='real' name='[total_allowed_amount]' role='measure' type='quantitative' />
+            <column caption='Total Charge Amount' datatype='real' name='[total_charge_amount]' role='measure' type='quantitative' />
+            <column caption='Total Paid Amount' datatype='real' name='[total_paid_amount]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[Clipboard_20260205T235814].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20260205T235814].[sum:num_claims:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20260205T235814].[sum:num_encounters:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20260205T235814].[sum:total_allowed_amount:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20260205T235814].[sum:total_charge_amount:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20260205T235814].[sum:total_paid_amount:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[Clipboard_20260205T235814].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[Clipboard_20260205T235814].[none:cancer_type_description:nk]' value='412' />
+            <format attr='width' field='[Clipboard_20260205T235814].[none:primary_diagnosis_description:nk]' value='436' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[Clipboard_20260205T235814].[Multiple Values]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([Clipboard_20260205T235814].[none:cancer_type:nk] / ([Clipboard_20260205T235814].[none:primary_diagnosis_code:nk] / ([Clipboard_20260205T235814].[none:cancer_type_description:nk] / [Clipboard_20260205T235814].[none:primary_diagnosis_description:nk])))</rows>
+        <cols>([Clipboard_20260205T235814].[none:encounter_group:nk] / ([Clipboard_20260205T235814].[none:care_setting:nk] / [Clipboard_20260205T235814].[:Measure Names]))</cols>
+      </table>
+      <simple-id uuid='{FAF59EB3-A65A-4FB6-B292-2DFF1E945A6C}' />
+    </worksheet>
+    <worksheet name='Sheet 6 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg. Cancer Patient Out Of Pocket Spend</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_cancer_cohort' name='Clipboard_20260205T235814' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20260205T235814'>
+            <column caption='Patient Paid Per Encounter' datatype='real' name='[Calculation_3183190753738753]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([total_charge_amount]) - SUM([total_paid_amount]))&#10;&#10;/ SUM([num_encounters])' />
+            </column>
+            <column caption='Cancer Type' datatype='string' name='[cancer_type]' role='dimension' type='nominal' />
+            <column caption='Care Setting' datatype='string' name='[care_setting]' role='dimension' type='nominal' />
+            <column caption='Encounter Group' datatype='string' name='[encounter_group]' role='dimension' type='nominal' />
+            <column-instance column='[cancer_type]' derivation='None' name='[none:cancer_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[care_setting]' derivation='None' name='[none:care_setting:nk]' pivot='key' type='nominal' />
+            <column-instance column='[encounter_group]' derivation='None' name='[none:encounter_group:nk]' pivot='key' type='nominal' />
+            <column caption='Num Encounters' datatype='integer' name='[num_encounters]' role='measure' type='quantitative' />
+            <column caption='Total Charge Amount' datatype='real' name='[total_charge_amount]' role='measure' type='quantitative' />
+            <column caption='Total Paid Amount' datatype='real' name='[total_paid_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3183190753738753]' derivation='User' name='[usr:Calculation_3183190753738753:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[Clipboard_20260205T235814].[none:cancer_type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;malignant&quot;</bucket>
+              <bucket>&quot;benign&quot;</bucket>
+              <bucket>&quot;uncertain&quot;</bucket>
+              <bucket>&quot;in_situ&quot;</bucket>
+              <bucket>&quot;unspecified&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[Clipboard_20260205T235814].[none:encounter_group:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;inpatient&quot;</bucket>
+              <bucket>&quot;outpatient&quot;</bucket>
+              <bucket>&quot;other&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[Clipboard_20260205T235814].[none:cancer_type:nk]' value='132' />
+            <format attr='text-format' field='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' value='C1033%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Clipboard_20260205T235814].[none:care_setting:nk]' value='192' />
+            <format attr='width' field='[Clipboard_20260205T235814].[none:encounter_group:nk]' value='132' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([Clipboard_20260205T235814].[none:encounter_group:nk] / [Clipboard_20260205T235814].[none:care_setting:nk])</rows>
+        <cols>[Clipboard_20260205T235814].[none:cancer_type:nk]</cols>
+      </table>
+      <simple-id uuid='{33C87016-77CA-4D66-9C80-B4A7DA7952BC}' />
+    </worksheet>
+    <worksheet name='Sheet 6 (3)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg. Patient Spend Per Encounter</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_cancer_cohort' name='Clipboard_20260205T235814' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20260205T235814'>
+            <column caption='Patient Paid Per Encounter' datatype='real' name='[Calculation_3183190753738753]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([total_charge_amount]) - SUM([total_paid_amount]))&#10;&#10;/ SUM([num_encounters])' />
+            </column>
+            <column caption='Cancer Type' datatype='string' name='[cancer_type]' role='dimension' type='nominal' />
+            <column caption='Care Setting' datatype='string' name='[care_setting]' role='dimension' type='nominal' />
+            <column caption='Encounter Group' datatype='string' name='[encounter_group]' role='dimension' type='nominal' />
+            <column-instance column='[cancer_type]' derivation='None' name='[none:cancer_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[care_setting]' derivation='None' name='[none:care_setting:nk]' pivot='key' type='nominal' />
+            <column-instance column='[encounter_group]' derivation='None' name='[none:encounter_group:nk]' pivot='key' type='nominal' />
+            <column caption='Num Encounters' datatype='integer' name='[num_encounters]' role='measure' type='quantitative' />
+            <column caption='Total Charge Amount' datatype='real' name='[total_charge_amount]' role='measure' type='quantitative' />
+            <column caption='Total Paid Amount' datatype='real' name='[total_paid_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3183190753738753]' derivation='User' name='[usr:Calculation_3183190753738753:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[Clipboard_20260205T235814].[none:cancer_type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;malignant&quot;</bucket>
+              <bucket>&quot;benign&quot;</bucket>
+              <bucket>&quot;uncertain&quot;</bucket>
+              <bucket>&quot;in_situ&quot;</bucket>
+              <bucket>&quot;unspecified&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[Clipboard_20260205T235814].[none:encounter_group:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;inpatient&quot;</bucket>
+              <bucket>&quot;outpatient&quot;</bucket>
+              <bucket>&quot;other&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[Clipboard_20260205T235814].[none:care_setting:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[Clipboard_20260205T235814].[none:cancer_type:nk]' member-value='&quot;malignant&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' scope='cols' value='Patient Spend Per Encounter' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' value='c&quot;$&quot;#,##0,.0K;-&quot;$&quot;#,##0,.0K' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Clipboard_20260205T235814].[none:care_setting:nk]' value='188' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[Clipboard_20260205T235814].[none:cancer_type:nk]' />
+              <text column='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([Clipboard_20260205T235814].[none:encounter_group:nk] / [Clipboard_20260205T235814].[none:care_setting:nk])</rows>
+        <cols>([Clipboard_20260205T235814].[none:cancer_type:nk] * [Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk])</cols>
+      </table>
+      <simple-id uuid='{29BE94BF-9632-4ECC-AECC-4DD5B14ADC1B}' />
+    </worksheet>
+    <worksheet name='Sheet 6 (4)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Prevalence of Cancer Types</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_cancer_cohort' name='Clipboard_20260205T235814' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20260205T235814'>
+            <column caption='Patient Paid Per Encounter' datatype='real' name='[Calculation_3183190753738753]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([total_charge_amount]) - SUM([total_paid_amount]))&#10;&#10;/ SUM([num_encounters])' />
+            </column>
+            <column caption='Cancer Type' datatype='string' name='[cancer_type]' role='dimension' type='nominal' />
+            <column caption='Care Setting' datatype='string' name='[care_setting]' role='dimension' type='nominal' />
+            <column caption='Encounter Group' datatype='string' name='[encounter_group]' role='dimension' type='nominal' />
+            <column-instance column='[cancer_type]' derivation='None' name='[none:cancer_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[care_setting]' derivation='None' name='[none:care_setting:nk]' pivot='key' type='nominal' />
+            <column-instance column='[encounter_group]' derivation='None' name='[none:encounter_group:nk]' pivot='key' type='nominal' />
+            <column caption='Num Encounters' datatype='integer' name='[num_encounters]' role='measure' type='quantitative' />
+            <column-instance column='[num_encounters]' derivation='Sum' name='[sum:num_encounters:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Charge Amount' datatype='real' name='[total_charge_amount]' role='measure' type='quantitative' />
+            <column caption='Total Paid Amount' datatype='real' name='[total_paid_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3183190753738753]' derivation='User' name='[usr:Calculation_3183190753738753:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[Clipboard_20260205T235814].[none:cancer_type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;malignant&quot;</bucket>
+              <bucket>&quot;benign&quot;</bucket>
+              <bucket>&quot;uncertain&quot;</bucket>
+              <bucket>&quot;in_situ&quot;</bucket>
+              <bucket>&quot;unspecified&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[Clipboard_20260205T235814].[none:encounter_group:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;inpatient&quot;</bucket>
+              <bucket>&quot;outpatient&quot;</bucket>
+              <bucket>&quot;other&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[Clipboard_20260205T235814].[none:care_setting:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[Clipboard_20260205T235814].[none:cancer_type:nk]' member-value='&quot;malignant&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[Clipboard_20260205T235814].[usr:Calculation_3183190753738753:qk]' value='c&quot;$&quot;#,##0,.0K;-&quot;$&quot;#,##0,.0K' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[Clipboard_20260205T235814].[none:care_setting:nk]' value='188' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[Clipboard_20260205T235814].[none:cancer_type:nk]' />
+              <text column='[Clipboard_20260205T235814].[sum:num_encounters:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([Clipboard_20260205T235814].[none:encounter_group:nk] / [Clipboard_20260205T235814].[none:care_setting:nk])</rows>
+        <cols>([Clipboard_20260205T235814].[none:cancer_type:nk] * [Clipboard_20260205T235814].[sum:num_encounters:qk])</cols>
+      </table>
+      <simple-id uuid='{BAC8623F-E03C-41A1-8D06-0782EBC5FA51}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='98222' id='5' type-v2='layout-basic' w='99000' x='500' y='889'>
+              <zone h='98222' id='3' name='Sheet 6 (3)' w='99000' x='500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='12' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone fixed-size='280' h='98222' id='3' is-fixed='true' name='Sheet 6 (3)' w='99000' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{95A5858E-C773-44EB-9014-B53682D27123}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1 (2)'>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='16' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='98222' id='7' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+              <zone h='98222' id='5' type-v2='layout-basic' w='99000' x='500' y='889'>
+                <zone h='98222' id='14' name='Sheet 6 (4)' w='99000' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones />
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F50D30D2-6E65-427B-BBC7-89599F80F31C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{53AD0F7F-73CC-42E9-9D4A-CD52CE7C2B54}' />
+    </window>
+    <window class='worksheet' name='Sheet 6 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8A84234A-526B-48D9-BF83-BCF0404C250E}' />
+    </window>
+    <window class='worksheet' name='Sheet 6 (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[Clipboard_20260205T235814].[none:cancer_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{44084B61-C9B5-4F56-9124-9471257F6C39}' />
+    </window>
+    <window class='worksheet' name='Sheet 6 (4)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[Clipboard_20260205T235814].[none:cancer_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D7DA4621-1912-47B2-9C47-C2CBB056AC44}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 6 (3)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{0FBC2519-AE67-4A5B-A807-6CC583057D2C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1 (2)'>
+      <viewpoints>
+        <viewpoint name='Sheet 6 (4)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{4D738B23-8888-4D97-BC79-13E7FE5BCF48}' />
+    </window>
+  </windows>
+</workbook>
